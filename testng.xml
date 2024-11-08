@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+
+ <listeners>
+  <listener class-name="hyrtutorials.mylisterner"/>
+  </listeners>
+  <test  name="Test">
+    <classes>
+    <!-- Test 
+    <class name = "hyrtutorials.BaseClassTestng"/>
+      <class name="hyrtutorials.ArrayDataProviderTestNG"/>
+      <class name="hyrtutorials.InterviewDropdownLogic"/>
+       <class name="hyrtutorials.AlertPopup"/>  
+         <class name="hyrtutorials.Runprogram"/>                   -->
+       <class name="hyrtutorials.MousehoverdisplayOptions">
+            <methods>
+            <parameter name="browser" value="chrome"/>
+            <include name="initializebrowser"/>
+            <include name="launchApp"/>
+            <include name="enterLoginDetails"/>
+            <include name="mousehower"/>
+            <include name="TearDown"/>
+            </methods>
+       </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
